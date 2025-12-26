@@ -1,0 +1,344 @@
+@charset "utf-8";
+
+body {
+    font-family: "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "MS Pゴシック", "MS PGothic";
+}
+
+h1 img {
+    width: 200px;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul li {
+    padding: 20px 20px;
+    text-align: center;
+}
+
+header nav ul li h1 img {
+    height: 50%;
+    width: 50%;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.smaller {
+    font-size: 10px;
+}
+
+.free {
+    background-color: #f79214;
+    border-radius: 20px;
+    padding: 15px 20px;
+    margin-right: 20px;
+}
+
+.freeC {
+    color: #fff;
+}
+
+header nav ul li a:hover {
+    opacity: 0.4;
+}
+
+/***************************写真のところ*************************/
+
+.firstView {
+    position: relative;
+    height: 739px;
+}
+
+.secondView {
+    width: 1100px;
+    margin: 0 auto;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+}
+
+#circle {
+    position: absolute;
+    left: 750px;
+    top: 150px;
+    z-index: -1;
+}
+
+#frec {
+    position: absolute;
+    left: -50px;
+    top: 80px;
+    z-index: -1;
+}
+
+#lrec {
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+}
+
+#rrec {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#mVisual {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    z-index: -100;
+}
+
+body main h2 {
+    font-size: 50px;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+main .button {
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+main section small {
+    font-size: 13px;
+    line-height: 1.3;
+}
+
+.button a {
+    background-color: orange;
+    color: #fff;
+    padding: 25px 140px;
+    display: inline-block;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.button a:hover {
+    opacity: 0.4;
+}
+
+input[type="checkbox"] {
+    visibility: hidden;
+}
+
+/***************************写真のところ終わりスマホ用*************************/
+
+@media screen and (max-width: 620px) {
+
+    #frec,
+    #lrec,
+    #rrec,
+    #mVisual {
+        display: none;
+    }
+
+    .firstView,
+    .secondView,
+    .button {
+        width: 100%;
+    }
+
+    .secondView {
+        background: url(../images/whole-visual.webp) no-repeat center center/cover;
+        height: 300px;
+        position: absolute;
+        left: 0;
+        top: -10px;
+        z-index: -1;
+    }
+
+    .secondView h2 {
+        font-size: 22px;
+        font-weight: 600;
+        position: absolute;
+        top: 300px;
+        left: 10px;
+    }
+
+    #circle {
+        position: absolute;
+        left: 260px;
+        top: 260px;
+        width: 30vw;
+    }
+
+    .button a {
+        position: absolute;
+        top: 400px;
+        left: 10px;
+        padding: 24px 70px;
+    }
+
+    small {
+        position: absolute;
+        top: 480px;
+        left: 10px;
+        margin: 5px;
+        color: #555;
+    }
+
+    h1 img {
+        width: 130px;
+        padding-left: 10px;
+        padding-top: 15px;
+    }
+
+    header nav ul li h1 img {
+        position: absolute;
+        height: 40%;
+        width: 40%;
+        top: 0px;
+        left: 10px;
+    }
+
+    header {
+        height: 40px;
+    }
+
+    header nav ul {
+        display: block;
+    }
+
+
+    /******************ヘッダーのスタイリング********************/
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .header__container {
+        max-width: 1000px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: inherit;
+        color: #fff;
+        padding: 0 25px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__logo a {
+        text-decoration: none;
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    /****************ハンバーガーボタン**************/
+    input[type="checkbox"] {
+        opacity: 0;
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .hamburger {
+        display: block;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .hamburger span,
+    .hamburger span::before,
+    .hamburger span::after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #666;
+        transition: all 0.5s;
+    }
+
+    .hamburger span::before {
+        top: -10px;
+    }
+
+    .hamburger span::after {
+        bottom: -10px;
+    }
+
+    input[type="checkbox"]:checked+.hamburger span {
+        background-color: transparent;
+    }
+
+    input[type="checkbox"]:checked+.hamburger span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    input[type="checkbox"]:checked+.hamburger span::after {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    /***************メニューのスタイリング******************/
+    .nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 40px;
+        right: -120%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding-top: 30px;
+        transition: all 0.5s;
+    }
+
+    .nav__item a {
+        display: block;
+        font-size: 15px;
+        letter-spacing: 3px;
+        color: #fff;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    .nav__item span {
+        color: rgb(214, 139, 0);
+    }
+
+    .nav__item a:hover {
+        color: #fff;
+        background-color: #fff;
+    }
+
+    input[type="checkbox"]:checked~.nav {
+        right: 0;
+    }
+
+}
